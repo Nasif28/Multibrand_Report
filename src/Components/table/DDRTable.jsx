@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ExportButtons from './ExportButtons';
-import Filters from './Filters';
+import ExportButtons from '../ExportButtons';
+import Filters from '../Filters';
 
 export default function Table() {
   const [data, setData] = useState([]);
