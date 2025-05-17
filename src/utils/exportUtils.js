@@ -7,6 +7,7 @@ export const exportToExcel = (data, filename) => {
   const ws = XLSX.utils.json_to_sheet(data);
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, "DDR Report");
+
   const buf = XLSX.write(wb, { bookType: "xlsx", type: "array" });
   const blob = new Blob([buf], {
     type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -14,9 +15,9 @@ export const exportToExcel = (data, filename) => {
   saveAs(blob, `${filename}.xlsx`);
 };
 
-export const exportToPDF = async (elementId) => {
-  const element = document.getElementById(elementId);
-  const canvas = await html2canvas(element);
+export const exportToPDF = async (id) => {
+  const input = document.getElementById(id);
+  const canvas = await html2canvas(input);
   const imgData = canvas.toDataURL("image/png");
   const pdf = new jsPDF();
   pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
