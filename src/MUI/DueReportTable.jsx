@@ -1,6 +1,6 @@
 import React from "react";
 import MUIDataTable from "mui-datatables";
-import data from "./ddr_data.json";
+import data from "../ddr_data.json";
 
 const DueReportTable = () => {
   const columns = [

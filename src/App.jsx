@@ -1,12 +1,13 @@
 import React from "react";
-import DueReportTable from "./DueReportTable";
-import DataGridDemo from "./MUIDataGrid";
+import DueReportTable from "./MUI/DueReportTable";
+import DataGridDemo from "./MUI/MUIDataGrid";
 
 const App = () => {
   return (
     <div>
       {/* <DueReportTable /> */}
-      <DataGridDemo />
+      {/* <DataGridDemo /> */}
+      App
     </div>
   );
 };

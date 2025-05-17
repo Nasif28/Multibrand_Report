@@ -1,11 +1,3 @@
-/* In App.css or styles */
-.MuiPaper-root {
-  overflow-x: auto !important;
-  max-width: 100vw !important;
-}
-
 body {
-  font-size: 8px !important;
+  /* font-size: 8px !important; */
 }
-
-
