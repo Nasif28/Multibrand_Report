@@ -5,7 +5,7 @@ import {
   getPaginationRowModel,
   flexRender,
 } from "@tanstack/react-table";
-import { columns } from "./columns";
+import { columns } from "./Columns";
 import ExportButtons from "../ExportButtons";
 
 export default function DDRTable() {
