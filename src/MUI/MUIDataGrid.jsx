@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import data from "../ddr_data.json";
 import { useState } from "react";
-import ExportButtons from "@/components/ExportButtons";
+// import ExportButtons from "@/components/ExportButtons";
 
 const columns = [
   { field: "slNo", headerName: "SL", width: 40 },
