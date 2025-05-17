@@ -28,12 +28,19 @@ const columns = [
 ];
 
 export default function DataGridDemo() {
-//   const [loading, setLoading] = useState(true);
+  //   const [loading, setLoading] = useState(true);
   return (
     <Box sx={{ height: "100vh", width: "100%" }}>
       <DataGrid
         {...data}
         // loading={loading}
+        // loading
+        // slotProps={{
+        //   loadingOverlay: {
+        //     variant: "skeleton",
+        //     noRowsVariant: "skeleton",
+        //   },
+        // }}
         showToolbar
         rows={data}
         columns={columns}
