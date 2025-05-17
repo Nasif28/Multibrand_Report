@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import data from "../ddr_data.json";
 import { useState } from "react";
+import ExportButtons from "@/components/ExportButtons";
 
 const columns = [
   { field: "slNo", headerName: "SL", width: 40 },
@@ -27,10 +28,11 @@ const columns = [
   { field: "driverMobile", headerName: "Driver Mobile", width: 100 },
 ];
 
-export default function DataGridDemo() {
+export default function DataGridReport() {
   //   const [loading, setLoading] = useState(true);
   return (
-    <Box sx={{ height: "100vh", width: "100%" }}>
+    <Box sx={{ height: "calc(100vh - 50px)", width: "100%" }}>
+      {/* <ExportButtons data={data} /> */}
       <DataGrid
         {...data}
         // loading={loading}

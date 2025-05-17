@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <Sidebar collapsed={collapsed} toggle={() => setCollapsed(!collapsed)} />
       <div className="flex-1 flex flex-col overflow-y-auto">
         <Topbar />
-        <main className="p-6">{children}</main>
+        <main className="">{children}</main>
       </div>
     </div>
   );

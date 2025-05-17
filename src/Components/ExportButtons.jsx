@@ -3,7 +3,7 @@ import { exportToExcel, exportToPDF } from "../utils/exportUtils";
 
 export default function ExportButtons({ data }) {
   return (
-    <div className="flex gap-4 my-4 justify-end">
+    <div className="flex gap-2 my-1 justify-end">
       <button
         onClick={() => window.print()}
         className="bg-blue-600 text-white px-4 py-2 rounded"

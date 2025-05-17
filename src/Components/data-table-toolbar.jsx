@@ -9,29 +9,24 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useQueryState, parseAsArrayOf, parseAsString } from "nuqs";
+// import { useQueryState, parseAsArrayOf, parseAsString } from "nuqs";
 import { XCircle } from "lucide-react";
 
-export function DataTableToolbar({ table }) {
-  const [customerName, setCustomerName] = useQueryState(
-    "customer",
-    parseAsString.withDefault("")
-  );
-
-  const [status, setStatus] = useQueryState(
-    "status",
-    parseAsArrayOf(parseAsString).withDefault([])
-  );
-
-  const clearFilters = () => {
-    setCustomerName("");
-    setStatus([]);
-  };
-
+export function DataTableToolbar({
+  customerName,
+  setCustomerName,
+  status,
+  setStatus,
+}) {
   const toggleStatus = (val) => {
     setStatus((prev) =>
       prev.includes(val) ? prev.filter((v) => v !== val) : [...prev, val]
     );
+  };
+
+  const clearFilters = () => {
+    setCustomerName("");
+    setStatus([]);
   };
 
   return (
